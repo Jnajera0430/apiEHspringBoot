@@ -67,7 +67,7 @@ public class TaskController {
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
-    @GetMapping("/{taskId}/AdditionalInfo")
+    @GetMapping("/{taskId}/additionalInfo")
     public ResponseEntity<AdditionalTasksInfo> getAdditionalInfo(@PathVariable Long taskId){
         AdditionalTasksInfo additionalInfoFound = this.taskServices.getAdditionalTaskInfo(taskId);
         return new ResponseEntity<AdditionalTasksInfo>(additionalInfoFound, HttpStatus.OK);
